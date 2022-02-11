@@ -7,8 +7,7 @@
 #include <string.h>
 #include <errno.h>
 #include <fcntl.h>
- #include "analyzer.hh" 
-
+#include "analyzer.hh" 
 #include "aquila/global.h"
 #include "aquila/source/generator/SineGenerator.h"
 #include "aquila/transform/FftFactory.h"
@@ -19,6 +18,7 @@
 #include <map>
 #include <signal.h>
 #include <chrono>
+#include <atomic>
 
 #define BUFSIZE 1024
 static std::atomic<bool> running;
