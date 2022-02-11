@@ -23,10 +23,10 @@ include_directories(${PULSEAUDIO_INCLUDE_DIR}
 message(STATUS "pulse audio libs: ${PULSEAUDIO_LIBRARY}")
 
 
-add_executable(spectrumAnalyzer playback.cpp)
+add_executable(spectrumAnalyzer analyzer.cpp)
 
 
 target_link_libraries(spectrumAnalyzer ${PULSEAUDIO_LIBRARY} "/opt/homebrew/Cellar/pulseaudio/14.2/lib/libpulse-simple.dylib" 
                                                             "/opt/aquila/lib/libAquila.a"
-                                                            "${CMAKE_CURRENT_SOURCE_DIR}/aquila-src/build/lib/libOoura_fft.a"
+                                                            "/opt/aquila/lib/libOoura_fft.a"
                                                             )
